@@ -1,6 +1,6 @@
 = DESCRIPTION:
 
-Minimal CentOS glusterfs cookbook
+Minimal CentOS glusterfs cookbook with chef
 
 = REQUIREMENTS: 
 
