@@ -12,10 +12,10 @@ node[:glusterfs][:client][:mount].each do |volume, mount_to|
 	end
 
 	# mount -t glusterfs -o log-level=WARNING,log-file=/var/log/gluster.log 10.200.1.11:/test /mnt
-	#server =  node[:glusterfs][:server][:peers][0]
-	#mount mount_to do
-	#	device "#{server}:/#{volume}"
-	#	fstype "glusterfs"
-	#	options "log-level=WARNING,log-file=/var/log/gluster.log"
-	#end
+	server =  node[:glusterfs][:server][:peers][0]
+	mount mount_to do
+		device "#{server}:/#{volume}"
+		fstype "glusterfs"
+		options "log-level=WARNING,log-file=/var/log/gluster.log"
+	end
 end
